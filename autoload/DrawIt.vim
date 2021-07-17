@@ -362,7 +362,7 @@ fun! DrawIt#DrawItStart(...)
   nmap <silent> <buffer> <script> <s-right>		:set lz<CR>:silent! call DrawIt#MoveRight()<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> <s-up>		:set lz<CR>:silent! call DrawIt#MoveUp()<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> <s-down>		:set lz<CR>:silent! call DrawIt#MoveDown()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <Leader>e		:set lz<CR>:silent! call DrawIt#DrawErase()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <Leader>z		:set lz<CR>:silent! call DrawIt#DrawErase()<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> >				:set lz<CR>:silent! call DrawIt#DrawSpace('>',1)<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> <				:set lz<CR>:silent! call DrawIt#DrawSpace('<',2)<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> ^				:set lz<CR>:silent! call DrawIt#DrawSpace('^',3)<CR>:set nolz<CR>
