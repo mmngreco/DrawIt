@@ -1,3 +1,30 @@
+# Drawit
+
+## joshzcold fork changes
+
+Drawing functions have been changed to global scope after running `:Drawit`
+
+This allows for remapping the hardcoded mappings coming from Drawit
+
+Lua: 
+
+```lua
+function()
+   vim.cmd[[call DrawIt#DrawItStart()]]
+   vim.cmd[[set timeoutlen=100]]
+   vim.api.nvim_buf_set_keymap(0, "n", "J", ":call DrawIt#DrawDown()<cr>", {noremap = true})
+   vim.api.nvim_buf_set_keymap(0, "n", "K", ":call DrawIt#DrawUp()<cr>", {noremap = true})
+   vim.api.nvim_buf_set_keymap(0, "n", "L", ":call DrawIt#DrawRight()<cr>", {noremap = true})
+   vim.api.nvim_buf_set_keymap(0, "n", "H", ":call DrawIt#DrawLeft()<cr>", {noremap = true})
+   vim.api.nvim_buf_set_keymap(0, "n", "JL", ":call DrawIt#DrawSlantDownRight()<cr>", {noremap = true})
+   vim.api.nvim_buf_set_keymap(0, "n", "JH", ":call DrawIt#DrawSlantDownLeft()<cr>", {noremap = true})
+   vim.api.nvim_buf_set_keymap(0, "n", "KL", ":call DrawIt#DrawSlantUpRight()<cr>", {noremap = true})
+   vim.api.nvim_buf_set_keymap(0, "n", "KH", ":call DrawIt#DrawSlantUpLeft()<cr>", {noremap = true})
+end
+
+```
+
+## original readme
 This is a mirror of http://www.vim.org/scripts/script.php?script_id=40
 
 DrawIt is a plugin which allows one to draw lines left, right, up, down, and along both slants. Optionally one may "cap" the lines with arrowheads.  One may change the horizontal, vertical, slant, and crossing characters to whichever characters one wishes.
