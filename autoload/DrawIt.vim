@@ -354,27 +354,27 @@ fun! DrawIt#DrawItStart(...)
   call SaveUserMaps("bn","",":\<c-v>","DrawIt")
 
   " DrawItStart: DrawIt maps (Charles Campbell) {{{3
-  nmap <silent> <buffer> <script> <left>		:set lz<CR>:silent! call <SID>DrawLeft()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <right>		:set lz<CR>:silent! call <SID>DrawRight()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <up>			:set lz<CR>:silent! call <SID>DrawUp()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <down>		:set lz<CR>:silent! call <SID>DrawDown()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <s-left>		:set lz<CR>:silent! call <SID>MoveLeft()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <s-right>		:set lz<CR>:silent! call <SID>MoveRight()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <s-up>		:set lz<CR>:silent! call <SID>MoveUp()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <s-down>		:set lz<CR>:silent! call <SID>MoveDown()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <space>		:set lz<CR>:silent! call <SID>DrawErase()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> >				:set lz<CR>:silent! call <SID>DrawSpace('>',1)<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <				:set lz<CR>:silent! call <SID>DrawSpace('<',2)<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> ^				:set lz<CR>:silent! call <SID>DrawSpace('^',3)<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> v				:set lz<CR>:silent! call <SID>DrawSpace('v',4)<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <home>		:set lz<CR>:silent! call <SID>DrawSlantUpLeft()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <end>			:set lz<CR>:silent! call <SID>DrawSlantDownLeft()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <pageup>		:set lz<CR>:silent! call <SID>DrawSlantUpRight()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <pagedown>	:set lz<CR>:silent! call <SID>DrawSlantDownRight()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <Leader>>		:set lz<CR>:silent! call <SID>DrawFatRArrow()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <Leader><		:set lz<CR>:silent! call <SID>DrawFatLArrow()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <Leader>^		:set lz<CR>:silent! call <SID>DrawFatUArrow()<CR>:set nolz<CR>
-  nmap <silent> <buffer> <script> <Leader>v		:set lz<CR>:silent! call <SID>DrawFatDArrow()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <left>		:set lz<CR>:silent! call DrawIt#DrawLeft()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <right>		:set lz<CR>:silent! call DrawIt#DrawRight()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <up>			:set lz<CR>:silent! call DrawIt#DrawUp()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <down>		:set lz<CR>:silent! call DrawIt#DrawDown()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <s-left>		:set lz<CR>:silent! call DrawIt#MoveLeft()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <s-right>		:set lz<CR>:silent! call DrawIt#MoveRight()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <s-up>		:set lz<CR>:silent! call DrawIt#MoveUp()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <s-down>		:set lz<CR>:silent! call DrawIt#MoveDown()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <Leader>e		:set lz<CR>:silent! call DrawIt#DrawErase()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> >				:set lz<CR>:silent! call DrawIt#DrawSpace('>',1)<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <				:set lz<CR>:silent! call DrawIt#DrawSpace('<',2)<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> ^				:set lz<CR>:silent! call DrawIt#DrawSpace('^',3)<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> v				:set lz<CR>:silent! call DrawIt#DrawSpace('v',4)<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <home>		:set lz<CR>:silent! call DrawIt#DrawSlantUpLeft()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <end>			:set lz<CR>:silent! call DrawIt#DrawSlantDownLeft()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <pageup>		:set lz<CR>:silent! call DrawIt#DrawSlantUpRight()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <pagedown>	:set lz<CR>:silent! call DrawIt#DrawSlantDownRight()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <Leader>>		:set lz<CR>:silent! call DrawIt#DrawFatRArrow()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <Leader><		:set lz<CR>:silent! call DrawIt#DrawFatLArrow()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <Leader>^		:set lz<CR>:silent! call DrawIt#DrawFatUArrow()<CR>:set nolz<CR>
+  nmap <silent> <buffer> <script> <Leader>v		:set lz<CR>:silent! call DrawIt#DrawFatDArrow()<CR>:set nolz<CR>
   nmap <silent> <buffer> <script> <Leader>f		:call <SID>Flood()<cr>
 
   " DrawItStart: Set up insertmode maps {{{3
@@ -476,7 +476,7 @@ fun! DrawIt#DrawItStop()
   " DrawItStop: insure that erase mode is off {{{3
   " (thanks go to Gary Johnson for this)
   if b:di_erase == 1
-  	call s:DrawErase()
+  	call DrawIt#DrawErase()
   endif
 
   " DrawItStop: restore user map(s), if any {{{3
@@ -609,8 +609,8 @@ fun! SetDrawIt(di_vert,di_horiz,di_plus,di_upleft,di_upright,di_cross,di_ellipse
 endfun
 
 " =====================================================================
-" s:DrawLeft: {{{2
-fun! s:DrawLeft()
+" DrawIt#DrawLeft: {{{2
+fun DrawIt#DrawLeft()
 "  call Dfunc("s:DrawLeft()")
   let curline   = getline(".")
   let curcol    = virtcol(".")
@@ -635,7 +635,7 @@ fun! s:DrawLeft()
 	  break
 	 endif
 "	 call Decho("move and replace: curchar<".curchar."> mode<".g:drawit_mode.">")
-     call s:MoveLeft()
+     call DrawIt#MoveLeft()
      norm! vy
      let curchar= @@
 "     call Decho("curchar<".curchar.">")
@@ -676,9 +676,9 @@ fun! s:DrawLeft()
 endfun
 
 " ---------------------------------------------------------------------
-" s:DrawRight: {{{2
-fun! s:DrawRight()
-"  call Dfunc("s:DrawRight()")
+" DrawIt#DrawRight: {{{2
+fun! DrawIt#DrawRight()
+"  call Dfunc("DrawIt#DrawRight()")
   let curline   = getline(".")
   let curcol    = virtcol(".")
   let b:lastdir = 1
@@ -717,7 +717,7 @@ fun! s:DrawRight()
   endif
 
   " move and replace
-  call s:MoveRight()
+  call DrawIt#MoveRight()
   if curcol == virtcol("$")
    if g:drawit_mode == 'S'
     exe "norm! i".b:di_Shoriz."\<Esc>"
@@ -755,13 +755,13 @@ fun! s:DrawRight()
   call s:DrawCorner()
 
   let @@= keepatat
-"  call Dret("s:DrawRight")
+"  call Dret("DrawIt#DrawRight")
 endfun
 
 " ---------------------------------------------------------------------
-" s:DrawUp: {{{2
-fun! s:DrawUp()
-"  call Dfunc("s:DrawUp()")
+" DrawIt#DrawUp: {{{2
+fun! DrawIt#DrawUp()
+"  call Dfunc("DrawIt#DrawUp()")
   let curline   = getline(".")
   let curcol    = virtcol(".")
   let b:lastdir = 3
@@ -802,7 +802,7 @@ fun! s:DrawUp()
   endif
 
   " move and replace/insert
-  call s:MoveUp()
+  call DrawIt#MoveUp()
   let curline= getline(".")
 "  let curchar= strpart(curline,curcol-1,1)
   norm! vy
@@ -841,13 +841,13 @@ fun! s:DrawUp()
   call s:DrawCorner()
 
   let @@= keepatat
-"  call Dret("s:DrawUp")
+"  call Dret("DrawIt#DrawUp")
 endfun
 
 " ---------------------------------------------------------------------
-" s:DrawDown: {{{2
-fun! s:DrawDown()
-"  call Dfunc("s:DrawDown()")
+" DrawIt#DrawDown: {{{2
+fun! DrawIt#DrawDown()
+"  call Dfunc("DrawIt#DrawDown()")
   let curline   = getline(".")
   let curcol    = virtcol(".")
   let keepatat  = @@
@@ -890,7 +890,7 @@ fun! s:DrawDown()
   endif
 
   " move and replace/insert
-  call s:MoveDown()
+  call DrawIt#MoveDown()
   let curline= getline(".")
   norm! vy
   let curchar= @@
@@ -928,7 +928,7 @@ fun! s:DrawDown()
   call s:DrawCorner()
 
   let @@= keepatat
-"  call Dret("s:DrawDown")
+"  call Dret("DrawIt#DrawDown")
 endfun
 
 " ---------------------------------------------------------------------
@@ -1614,9 +1614,9 @@ fun! s:IsRightD(chr)
 endfun
 
 " ---------------------------------------------------------------------
-" s:DrawErase: toggle [DrawIt on] and [DrawIt erase] modes {{{2
-fun! s:DrawErase()
-"  call Dfunc("s:DrawErase() b:di_erase=".b:di_erase)
+" DrawIt#DrawErase: toggle [DrawIt on] and [DrawIt erase] modes {{{2
+fun! DrawIt#DrawErase()
+"  call Dfunc("DrawIt#DrawErase() b:di_erase=".b:di_erase)
   if b:di_erase == 0
    let b:di_erase= 1
    echo "[DrawIt erase]"
@@ -1633,13 +1633,13 @@ fun! s:DrawErase()
    echo "[DrawIt]"
    call SetDrawIt(b:di_vert_save,b:di_horiz_save,b:di_plus_save,b:di_upleft_save,b:di_upright_save,b:di_cross_save,b:di_ellipse_save)
   endif
-"  call Dret("s:DrawErase")
+"  call Dret("DrawIt#DrawErase")
 endfun
 
 " ---------------------------------------------------------------------
-" s:DrawSpace: clear character and move right {{{2
-fun! s:DrawSpace(chr,dir)
-"  call Dfunc("s:DrawSpace(chr<".a:chr."> dir<".a:dir.">)")
+" DrawIt#DrawSpace: clear character and move right {{{2
+fun! DrawIt#DrawSpace(chr,dir)
+"  call Dfunc("DrawIt#DrawSpace(chr<".a:chr."> dir<".a:dir.">)")
   let curcol= virtcol(".")
 
   " replace current location with arrowhead/space
@@ -1657,87 +1657,87 @@ fun! s:DrawSpace(chr,dir)
 
   " perform specified move
   if dir == 1
-   call s:MoveRight()
+   call DrawIt#MoveRight()
   elseif dir == 2
-   call s:MoveLeft()
+   call DrawIt#MoveLeft()
   elseif dir == 3
-   call s:MoveUp()
+   call DrawIt#MoveUp()
   else
-   call s:MoveDown()
+   call DrawIt#MoveDown()
   endif
-"  call Dret("s:DrawSpace")
+"  call Dret("DrawIt#DrawSpace")
 endfun
 
 " ---------------------------------------------------------------------
-" s:DrawSlantDownLeft: / {{{2
-fun! s:DrawSlantDownLeft()
-"  call Dfunc("s:DrawSlantDownLeft()")
+" DrawIt#DrawSlantDownLeft: / {{{2
+fun! DrawIt#DrawSlantDownLeft()
+"  call Dfunc("DrawIt#DrawSlantDownLeft()")
   call s:ReplaceDownLeft()		" replace
-  call s:MoveDown()				" move
-  call s:MoveLeft()				" move
+  call DrawIt#MoveDown()				" move
+  call DrawIt#MoveLeft()				" move
   call s:ReplaceDownLeft()		" replace
-"  call Dret("s:DrawSlantDownLeft")
+"  call Dret("DrawIt#DrawSlantDownLeft")
 endfun
 
 " ---------------------------------------------------------------------
-" s:DrawSlantDownRight: \ {{{2
-fun! s:DrawSlantDownRight()
-"  call Dfunc("s:DrawSlantDownRight()")
+" DrawIt#DrawSlantDownRight: \ {{{2
+fun! DrawIt#DrawSlantDownRight()
+"  call Dfunc("DrawIt#DrawSlantDownRight()")
   call s:ReplaceDownRight()	" replace
-  call s:MoveDown()			" move
-  call s:MoveRight()		" move
+  call DrawIt#MoveDown()			" move
+  call DrawIt#MoveRight()		" move
   call s:ReplaceDownRight()	" replace
-"  call Dret("s:DrawSlantDownRight")
+"  call Dret("DrawIt#DrawSlantDownRight")
 endfun
 
 " ---------------------------------------------------------------------
-" s:DrawSlantUpLeft: \ {{{2
-fun! s:DrawSlantUpLeft()
-"  call Dfunc("s:DrawSlantUpLeft()")
+" DrawIt#DrawSlantUpLeft: \ {{{2
+fun! DrawIt#DrawSlantUpLeft()
+"  call Dfunc("DrawIt#DrawSlantUpLeft()")
   call s:ReplaceDownRight()	" replace
-  call s:MoveUp()			" move
-  call s:MoveLeft()			" move
+  call DrawIt#MoveUp()			" move
+  call DrawIt#MoveLeft()			" move
   call s:ReplaceDownRight()	" replace
-"  call Dret("s:DrawSlantUpLeft")
+"  call Dret("DrawIt#DrawSlantUpLeft")
 endfun
 
 " ---------------------------------------------------------------------
-" s:DrawSlantUpRight: / {{{2
-fun! s:DrawSlantUpRight()
-"  call Dfunc("s:DrawSlantUpRight()")
+" DrawIt#DrawSlantUpRight: / {{{2
+fun! DrawIt#DrawSlantUpRight()
+"  call Dfunc("DrawIt#DrawSlantUpRight()")
   call s:ReplaceDownLeft()	" replace
-  call s:MoveUp()			" move
-  call s:MoveRight()		" replace
+  call DrawIt#MoveUp()			" move
+  call DrawIt#MoveRight()		" replace
   call s:ReplaceDownLeft()	" replace
-"  call Dret("s:DrawSlantUpRight")
+"  call Dret("DrawIt#DrawSlantUpRight")
 endfun
 
 " ---------------------------------------------------------------------
-" s:MoveLeft: {{{2
-fun! s:MoveLeft()
-"  call Dfunc("s:MoveLeft()")
+" DrawIt#MoveLeft: {{{2
+fun! DrawIt#MoveLeft()
+"  call Dfunc("DrawIt#MoveLeft()")
   norm! h
   let b:lastdir= 2
-"  call Dret("s:MoveLeft : b:lastdir=".b:lastdir)
+"  call Dret("DrawIt#MoveLeft : b:lastdir=".b:lastdir)
 endfun
 
 " ---------------------------------------------------------------------
-" s:MoveRight: {{{2
-fun! s:MoveRight()
-"  call Dfunc("s:MoveRight()")
+" DrawIt#MoveRight: {{{2
+fun! DrawIt#MoveRight()
+"  call Dfunc("DrawIt#MoveRight()")
   if virtcol(".") >= virtcol("$") - 1
    exe "norm! A \<Esc>"
   else
    norm! l
   endif
   let b:lastdir= 1
-"  call Dret("s:MoveRight : b:lastdir=".b:lastdir)
+"  call Dret("DrawIt#MoveRight : b:lastdir=".b:lastdir)
 endfun
 
 " ---------------------------------------------------------------------
-" s:MoveUp: {{{2
-fun! s:MoveUp()
-"  call Dfunc("s:MoveUp()")
+" DrawIt#MoveUp: {{{2
+fun! DrawIt#MoveUp()
+"  call Dfunc("DrawIt#MoveUp()")
   if line(".") == 1
    let curcol= virtcol(".") - 1
    if curcol == 0 && virtcol("$") == 1
@@ -1755,13 +1755,13 @@ fun! s:MoveUp()
    endwhile
   endif
   let b:lastdir= 3
-"  call Dret("s:MoveUp : b:lastdir=".b:lastdir)
+"  call Dret("DrawIt#MoveUp : b:lastdir=".b:lastdir)
 endfun
 
 " ---------------------------------------------------------------------
-" s:MoveDown: {{{2
-fun! s:MoveDown()
-"  call Dfunc("s:MoveDown()")
+" DrawIt#MoveDown: {{{2
+fun! DrawIt#MoveDown()
+"  call Dfunc("DrawIt#MoveDown()")
   if line(".") == line("$")
    let curcol= virtcol(".") - 1
    if curcol == 0 && virtcol("$") == 1
@@ -1779,7 +1779,7 @@ fun! s:MoveDown()
    endwhile
   endif
   let b:lastdir= 4
-"  call Dret("s:MoveDown : b:lastdir=".b:lastdir)
+"  call Dret("DrawIt#MoveDown : b:lastdir=".b:lastdir)
 endfun
 
 " ---------------------------------------------------------------------
@@ -1875,86 +1875,86 @@ fun! s:ReplaceDownRight()
 endfun
 
 " ---------------------------------------------------------------------
-" s:DrawFatRArrow: ----|> {{{2
-fun! s:DrawFatRArrow()
-"  call Dfunc("s:DrawFatRArrow()")
+" DrawIt#DrawFatRArrow: ----|> {{{2
+fun! DrawIt#DrawFatRArrow()
+"  call Dfunc("DrawIt#DrawFatRArrow()")
   if g:drawit_mode == 'N' || !b:di_gfxchr
-   call s:MoveRight()
+   call DrawIt#MoveRight()
    norm! r|
-   call s:MoveRight()
+   call DrawIt#MoveRight()
    norm! r>
   else
-   call s:MoveRight()
+   call DrawIt#MoveRight()
    norm! r▶
   endif
-"  call Dret("s:DrawFatRArrow")
+"  call Dret("DrawIt#DrawFatRArrow")
 endfun
 
 " ---------------------------------------------------------------------
-" s:DrawFatLArrow: <|---- {{{2
-fun! s:DrawFatLArrow()
-"  call Dfunc("s:DrawFatLArrow()")
+" DrawIt#DrawFatLArrow: <|---- {{{2
+fun! DrawIt#DrawFatLArrow()
+"  call Dfunc("DrawIt#DrawFatLArrow()")
   if g:drawit_mode == 'N' || !b:di_gfxchr
-   call s:MoveLeft()
+   call DrawIt#MoveLeft()
    norm! r|
-   call s:MoveLeft()
+   call DrawIt#MoveLeft()
    norm! r<
   else
-   call s:MoveLeft()
+   call DrawIt#MoveLeft()
    norm! r◀
   endif
-"  call Dret("s:DrawFatLArrow")
+"  call Dret("DrawIt#DrawFatLArrow")
 endfun
 
 " ---------------------------------------------------------------------
 "                 .
-" s:DrawFatUArrow: /_\ {{{2
+" DrawIt#DrawFatUArrow: /_\ {{{2
 "                 |
-fun! s:DrawFatUArrow()
-"  call Dfunc("s:DrawFatUArrow()")
+fun! DrawIt#DrawFatUArrow()
+"  call Dfunc("DrawIt#DrawFatUArrow()")
   if g:drawit_mode == 'N' || !b:di_bfxchr
-   call s:MoveUp()
+   call DrawIt#MoveUp()
    norm! r_
-   call s:MoveRight()
+   call DrawIt#MoveRight()
    norm! r\
-   call s:MoveLeft()
-   call s:MoveLeft()
+   call DrawIt#MoveLeft()
+   call DrawIt#MoveLeft()
    norm! r/
-   call s:MoveRight()
-   call s:MoveUp()
+   call DrawIt#MoveRight()
+   call DrawIt#MoveUp()
    norm! r.
   else
-   call s:MoveUp()
+   call DrawIt#MoveUp()
    norm! r▲
   endif
-"  call Dret("s:DrawFatUArrow")
+"  call Dret("DrawIt#DrawFatUArrow")
 endfun
 
 " ---------------------------------------------------------------------
-" s:DrawFatDArrow: _|_ {{{2
+" DrawIt#DrawFatDArrow: _|_ {{{2
 "                  \ /
 "                   '
-fun! s:DrawFatDArrow()
-"  call Dfunc("s:DrawFatDArrow()")
+fun! DrawIt#DrawFatDArrow()
+"  call Dfunc("DrawIt#DrawFatDArrow()")
   if g:drawit_mode == 'N' || !b:di_gfxchr
-   call s:MoveRight()
+   call DrawIt#MoveRight()
    norm! r_
-   call s:MoveLeft()
-   call s:MoveLeft()
+   call DrawIt#MoveLeft()
+   call DrawIt#MoveLeft()
    norm! r_
-   call s:MoveDown()
+   call DrawIt#MoveDown()
    norm! r\
-   call s:MoveRight()
-   call s:MoveRight()
+   call DrawIt#MoveRight()
+   call DrawIt#MoveRight()
    norm! r/
-   call s:MoveDown()
-   call s:MoveLeft()
+   call DrawIt#MoveDown()
+   call DrawIt#MoveLeft()
    norm! r'
   else
-   call s:MoveDown()
+   call DrawIt#MoveDown()
    norm! r▼
   endif
-"  call Dret("s:DrawFatDArrow")
+"  call Dret("DrawIt#DrawFatDArrow")
 endfun
 
 " ---------------------------------------------------------------------
@@ -2355,7 +2355,7 @@ fun! s:AutoCanvas(linestart,linestop,cols)
    call s:SavePosn()
    exe "norm! G".(a:linestop - line("$"))."o\<esc>"
    call s:RestorePosn()
-  endif
+endif
 
   " insure that any tabs contained within the selected region are converted to blanks
   let etkeep= &l:et
