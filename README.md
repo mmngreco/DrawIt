@@ -1,3 +1,4 @@
+![Peek 2021-07-17 17-28](https://user-images.githubusercontent.com/36175703/126051497-648f0752-adf1-4f0d-a849-8c546783d102.gif)
 # Drawit (joshzcold tweaks)
 
 DrawIt is a plugin which allows one to draw lines left, right, up, down, and along both slants. Optionally one may "cap" the lines with arrowheads. One may change the horizontal, vertical, slant, and crossing characters to whichever characters one wishes.
@@ -77,3 +78,4 @@ vim.cmd[[set timeoutlen=400]]
 end
 
 ```
+![Peek 2021-07-17 17-28](https://user-images.githubusercontent.com/36175703/126051503-0509308a-c8c7-4c59-b62c-199e5dadc11b.gif)
