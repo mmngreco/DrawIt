@@ -47,17 +47,7 @@ sil! com -nargs=0 DInrml call DrawIt#SetMode('N')
 sil! com -nargs=0 DIsngl call DrawIt#SetMode('S')
 sil! com -nargs=0 DIdbl  call DrawIt#SetMode('D')
 
-" maps: users may override these maps by defining their own mappings in their .vimrc
-"       to <Plug>DrawItStart and/or <Plug>DrawItStop.  By default:
-"         \di : start DrawIt
-"         \ds : stop  DrawIt
-if !hasmapto('<Plug>DrawItStart')
-  map <unique> <Leader>di <Plug>DrawItStart
-endif
 noremap <silent>        <Plug>DrawItStart  :set lz<cr>:call DrawIt#DrawItStart()<cr>:set nolz<cr>
-if !hasmapto('<Plug>DrawItStop')
-  map <unique> <Leader>ds <Plug>DrawItStop
-endif
 noremap <silent> <Plug>DrawItStop :set lz<cr>:call DrawIt#DrawItStop()<cr>:set nolz<cr>
 
 " ---------------------------------------------------------------------
